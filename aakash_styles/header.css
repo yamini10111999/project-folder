@@ -1,0 +1,42 @@
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  background: white;
+}
+#menuBtn {
+  display: none;
+  font-size: x-large;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.header
+.loginBtn {
+  cursor: pointer;
+  float: right;
+  margin-left: auto;
+  font-size: large;
+  transition: all 0.2s;
+}
+.loginBtn:hover {
+  color: rgb(100, 100, 100);
+}
+.header::after{
+  content: '';
+  clear: both;
+  display: table;
+}
+@media screen and (max-width:900px) {
+  #menuBtn {
+    display: inline-block;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0 0 4px black;
+  }
+}

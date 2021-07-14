@@ -2,11 +2,9 @@ var currentSlide = 0;
 let slides = document.getElementsByClassName('mySlides');
 
 function openModal(){
-  // console.log("called openModal")
   document.getElementById('modalBox').style.display = 'flex';
 }
 function closeModal(){
-  // console.log('called closeModal')
   document.getElementById('modalBox').style.display = 'none';
 }
 
@@ -21,7 +19,6 @@ function changeSlide(n){
 }
 
 function showSlide(index) {
-  // console.log('called showSlide')
   if(index > slides.length - 1) currentSlide = 0;
   if(index < 0) currentSlide = slides.length - 1;
 
@@ -30,7 +27,7 @@ function showSlide(index) {
     slides[i].style.display = 'none';
   }
 
-  //making a slides visible
+  //making a slide visible
   slides[currentSlide].style.display = 'block';
 
 

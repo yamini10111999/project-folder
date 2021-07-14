@@ -2,18 +2,125 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="UTF-8">
-    <meta lang="en">
+    <meta charset="UTF-8" />
+    <meta lang="en" />
+    <link rel="stylesheet" href="aakash_styles/header.css" />
+    <link rel="stylesheet" href="aakash_styles/index.css" />
+    <script src="aakash_script/footer.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
-    <nav class="nav-bar">
-      <a href="#">HOME</a>
-      <a href="#">ABOUT US</a>
-      <a href="#">CATALOG</a>
-      <a href="#">SERVICES</a>
-      <a href="#">BLOG</a>
-      <a href="#">PAGES</a>
-      <a href="#">CONTACTS</a>
-    </nav>
+    <div id="navigationBar" class="includeHTML" w3-include-html="nav.html"></div>
+    <header class="header">
+      <div id="menuBtn" onclick="showNavBar()">
+        <span class="fa fa-bars"></span>
+      </div>
+        <a href="index.html"><img src="aakash_img/logo.png" alt="logo" /></a>
+      <span class="loginBtn"
+        ><i class="fa fa-sign-in" aria-hidden="true"></i> Login</span
+      >
+    </header>
+    <script>
+      function showNavBar() {
+        document.querySelector('.nav-bar').classList.toggle('width250');
+      }
+    </script>
+    <div class="slideShow">
+      <a class="prev" onclick="_changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="_changeSlide(1)">&#10095;</a>
+
+      <div class="slide">
+        <div class="slideContent">
+          <p>Welcome to Booker</p>
+          <h1>RENT NEW AND USED TEXTBOOKS</h1>
+          <p>
+            We provide huge discounts on all kinds of textbooks. On our website
+            you can find lots of books for study and self-development.
+          </p>
+          <button  >VIEW CATALOG</button>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slideContent">
+          <p>Diverse Book Collection</p>
+          <h1>FIND YOUR FAVORITE BOOKS HERE</h1>
+          <p>
+            From applied literature to educational resources, we have a lot of
+            textbooks to offer you. We provide only the best books for rent.
+          </p>
+          <button  >VIEW CATALOG</button>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slideContent">
+          <p>Only for Our Website Visitors</p>
+          <h1>EXCLUSIVE BOOK OFFERS</h1>
+          <p>
+            We regularly update our catalog with exclusive book offers from
+            international authors and publishing houses.
+          </p>
+          <button  >VIEW CATALOG</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="includeHTML" w3-include-html="footer.html"></div>
+    <script>
+      function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+
+        z = document.getElementsByClassName("includeHTML");
+        for (i = 0; i < z.length; i++) {
+          elmnt = z[i];
+          file = elmnt.getAttribute("w3-include-html");
+          if (file) {
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+              if (this.readyState == 4) {
+                if (this.status == 200) {
+                  elmnt.innerHTML = this.responseText;
+                }
+                if (this.status == 404) {
+                  elmnt.innerHTML = "Page not found.";
+                }
+                elmnt.removeAttribute("w3-include-html");
+                includeHTML();
+              }
+            };
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            return;
+          }
+        }
+      }
+    </script>
+    <script>
+      includeHTML();
+    </script>
+    <script src="aakash_script/index.js"></script>
+    <script>
+      $(window).scroll(function(e){ 
+  var $el = $('.nav-bar'); 
+  var isPositionFixed = ($el.css('position') == 'fixed');
+  if ($(this).scrollTop() > 109 && !isPositionFixed){ 
+    $el.css({'position': 'fixed', 'top': '0px'}); 
+  }
+  if ($(this).scrollTop() < 109 && isPositionFixed){
+    $el.css({'position': 'static', 'top': '0px'}); 
+  } 
+});
+    </script>
   </body>
 </html>
