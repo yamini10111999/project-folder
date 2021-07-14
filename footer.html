@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta lang="en" />
+    <link rel="stylesheet" href="aakash_styles/footer.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <footer>
+      <div class="footer">
+        <div class="col">
+          <h2>ABOUT US</h2>
+          <p style="padding: 0 10px">
+            Booker is the worldwide textbook rental service created by readers
+            for readers. We operate since 2014 and we offer lots of new and used
+            textbooks on various topics including web design, development,
+            business, economics, marketing, and more.
+          </p>
+        </div>
+        <div class="col">
+          <h2>QUICK LINKS</h2>
+          <div class="links">
+            <a href="#"> About </a>
+            <a href="#"> Catalog </a>
+            <a href="#"> How To Rent </a>
+            <a href="#"> Blog </a>
+            <a href="#"> Pages </a>
+            <a href="#"> Contacts </a>
+          </div>
+        </div>
+        <div class="col">
+          <h2>GALLERY</h2>
+          <div class="thumbnails">
+            <div class="thumbCol">
+              <img
+                onclick="openModal(); showCurrentSlide(0)"
+                src="aakash_img/thumb01.jpg"
+                alt="thumbnail"
+              />
+              <img
+                onclick="openModal(); showCurrentSlide(1)"
+                src="aakash_img/thumb02.jpg"
+                alt="thumbnail"
+              />
+              <img
+                onclick="openModal(); showCurrentSlide(2)"
+                src="aakash_img/thumb03.jpg"
+                alt="thumbnail"
+              />
+              <img
+                onclick="openModal(); showCurrentSlide(3)"
+                src="aakash_img/thumb04.jpg"
+                alt="thumbnail"
+              />
+            </div>
+            <div class="thumbCol">
+              <img
+                onclick="openModal(); showCurrentSlide(4)"
+                src="aakash_img/thumb05.jpg"
+                alt="thumbnail"
+              />
+              <img
+                onclick="openModal(); showCurrentSlide(5)"
+                src="aakash_img/thumb06.jpg"
+                alt="thumbnail"
+              />
+              <img
+                onclick="openModal(); showCurrentSlide(6)"
+                src="aakash_img/thumb07.jpg"
+                alt="thumbnail"
+              />
+              <img
+                onclick="openModal(); showCurrentSlide(7)"
+                src="aakash_img/thumb08.jpg"
+                alt="thumbnail"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h2>NEWSLETTER</h2>
+          <p>
+            Keep up with our always upcoming news, events, and updates. Enter
+            your e-mail and subscribe to our newsletter.
+          </p>
+          <div
+            style="background-color: #838386; border-radius: 50px; width: 100%"
+          >
+            <form action="" method="POST">
+              <input
+                class="inp"
+                style="color: white"
+                type="email"
+                placeholder="Enter your e-mail"
+                required
+              />
+              <button class="inp" type="submit">SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div style="justify-content: center" class="footer">
+        © 2021 All Rights Reserved Terms of Use and Privacy Policy
+      </div>
+    </footer>
+
+    <div id="modalBox" class="modal">
+      <span id="closeBtn" onclick="closeModal()">&times;</span>
+      <!-- Next/previous buttons -->
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      <!-- Slides -->
+      <div class="slidesContainer">
+        <div class="mySlides">
+          <div class="slideNumber">1 / 8</div>
+          <img src="aakash_img/image01.jpg" style="width: 70%" />
+        </div>
+        <div class="mySlides">
+          <div class="slideNumber">2 / 8</div>
+          <img src="aakash_img/image02.jpg" style="width: 70%" />
+        </div>
+        <div class="mySlides">
+          <div class="slideNumber">3 / 8</div>
+          <img src="aakash_img/image03.jpg" style="width: 70%" />
+        </div>
+        <div class="mySlides">
+          <div class="slideNumber">4 / 8</div>
+          <img src="aakash_img/image04.jpg" style="width: 70%" />
+        </div>
+        <div class="mySlides">
+          <div class="slideNumber">5 / 8</div>
+          <img src="aakash_img/image05.jpg" style="width: 70%" />
+        </div>
+        <div class="mySlides">
+          <div class="slideNumber">6 / 8</div>
+          <img src="aakash_img/image06.jpg" style="width: 70%" />
+        </div>
+        <div class="mySlides">
+          <div class="slideNumber">7 / 8</div>
+          <img src="aakash_img/image07.jpg" style="width: 70%" />
+        </div>
+        <div class="mySlides">
+          <div class="slideNumber">8 / 8</div>
+          <img src="aakash_img/image08.jpg" style="width: 70%" />
+        </div>
+      </div>
+
+      <!-- Thumbnail image controls -->
+      <div class="modal-thumb">
+        <img src="aakash_img/thumb01.jpg" onclick="showCurrentSlide(0)" />
+        <img src="aakash_img/thumb02.jpg" onclick="showCurrentSlide(1)" />
+        <img src="aakash_img/thumb03.jpg" onclick="showCurrentSlide(2)" />
+        <img src="aakash_img/thumb04.jpg" onclick="showCurrentSlide(3)" />
+        <img src="aakash_img/thumb05.jpg" onclick="showCurrentSlide(4)" />
+        <img src="aakash_img/thumb06.jpg" onclick="showCurrentSlide(5)" />
+        <img src="aakash_img/thumb07.jpg" onclick="showCurrentSlide(6)" />
+        <img src="aakash_img/thumb08.jpg" onclick="showCurrentSlide(7)" />
+      </div>
+    </div>
+    <script src="aakash_script/footer.js"></script>
+  </body>
+</html>
