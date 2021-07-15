@@ -1,3 +1,10 @@
+@media screen and (max-width: 900px) {
+  #navigationBar {
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+  }
+}
 .slideShow {
   position: relative;
   z-index: 1;
@@ -6,7 +13,7 @@
   color: white;
   width: 100%;
   height: 750px;
-  background-position:center;
+  background-position: center;
   background-size: cover;
   display: none;
 }
@@ -16,7 +23,8 @@
   top: 50%;
   transform: translate(20%, -50%);
   line-height: 200%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .slideContent h1 {
   font-family: "Roboto Condensed", sans-serif;
@@ -29,24 +37,25 @@
   border: none;
   font-size: x-large;
   background-color: #fff586;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 .slideShow .slide:nth-child(3) {
   background: url(../aakash_img/slide01.jpg);
-  background-position:center;
+  background-position: center;
   background-size: cover;
 }
 .slideShow .slide:nth-child(4) {
   background: url(../aakash_img/slide02.jpg);
-  background-position:center;
+  background-position: center;
   background-size: cover;
 }
 .slideShow .slide:nth-child(5) {
   background: url(../aakash_img/slide03.jpg);
-  background-position:center;
+  background-position: center;
   background-size: cover;
 }
-.slideShow .prev, .slideShow .next {
+.slideShow .prev,
+.slideShow .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -65,21 +74,124 @@
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-.slideShow .prev:hover, .slideShow .next:hover {
+.slideShow .prev:hover,
+.slideShow .next:hover {
   background-color: rgb(121, 121, 121);
 }
 .slideActive {
   animation: fadeIn 0.5s forwards;
 }
 @keyframes fadeIn {
-  from{opacity: 0;}
-  to{opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-@media screen and (max-width:900px){
-  #navigationBar {
-    position: fixed;
-    z-index: 2;
-    height: 100%;
+/* small features (Free shipping, Easy Returns...) */
+.Easy {
+  display: flex;
+  background-color: #f5f5f5;
+  color: #838386;
+  padding: 80px 0;
+  line-height: 175%;
+}
+.Easy h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: normal;
+  color: initial;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.Easy .col {
+  width: 25%;
+  padding: 0 10px;
+}
+.Easy .easyIcon {
+  font-size: xx-large;
+  margin-right: 10px;
+}
+.Easy .col > div {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width:800px){
+  .Easy {
+    flex-wrap: wrap;
+  }
+}
+
+/* Twitter section */
+.twitterSec {
+  display: flex;
+  padding: 100px 10px;
+  background-image: url(../aakash_img/bgimageTwitter.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.twitterSec .left,
+.twitterSec .right {
+  width: 50%;
+  padding: 0 60px;
+  font-size: larger;
+}
+.twitterSec h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: xx-large;
+}
+.twitterSec .left hr,
+.twitterSec .right hr {
+  float: left;
+  width: 100px;
+  background-color: #fff261;
+  height: 4px;
+}
+.twitterSec::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+.twitterSec input[name="email"],
+button[type="submit"] {
+  border-radius: 50px;
+  border: none;
+  padding: 20px;
+}
+.twitterSec input[name="email"] {
+  background-color: rgb(121, 121, 121);
+  width: 100%;
+
+  font-size: large;
+  color: white;
+}
+.twitterSec input[name="email"]::placeholder {
+  color: white;
+}
+.twitterSec button[type="submit"] {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #fff586;
+  width: 40%;
+  min-width: 150px;
+  font-size: large;
+  letter-spacing: 1.5px;
+}
+.twitterSec .right .fa-twitter {
+  margin-top: 40px;
+  color: #00bbf5;
+  font-size: xx-large;
+  display: block;
+}
+@media screen and (max-width: 800px) {
+  .twitterSec .left,
+  .twitterSec .right {
+    width: 100%;
+  }
+  .twitterSec {
+    flex-wrap: wrap;
   }
 }

@@ -18,17 +18,23 @@
       }
       body {
         margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 300;
+        letter-spacing: 1px;
       }
     </style>
   </head>
   <body>
+    <!-- Navigation Bar -->
     <div
       id="navigationBar"
       class="includeHTML"
       w3-include-html="nav.html"
     ></div>
+    <!-- Header -->
     <header class="header">
-      <div id="menuBtn" onclick="showNavBar()">
+      <div id="menuBtn" onclick="showNavBar.bind(this)()">
         <span class="fa fa-bars"></span>
       </div>
       <a href="index.html"><img src="aakash_img/logo.png" alt="logo" /></a>
@@ -39,8 +45,14 @@
     <script>
       function showNavBar() {
         document.querySelector(".nav-bar").classList.toggle("width250");
+        if (this.firstElementChild.classList.contains("fa-bars")) {
+          this.firstElementChild.classList.replace("fa-bars", "fa-arrow-left");
+        } else if (this.firstElementChild.classList.contains("fa-arrow-left")) {
+          this.firstElementChild.classList.replace("fa-arrow-left", "fa-bars");
+        }
       }
     </script>
+    <!-- Slide Show -->
     <div class="slideShow">
       <a class="prev" onclick="_changeSlide(-1)">&#10094;</a>
       <a class="next" onclick="_changeSlide(1)">&#10095;</a>
@@ -79,7 +91,77 @@
         </div>
       </div>
     </div>
+    <!-- small features(Free Shipping, Easy Returns...) -->
+    <div class="Easy">
+      <div class="col">
+        <div>
+          <span class="fa fa-star easyIcon"></span>
+          <h2>FREE SHIPPING</h2>
+        </div>
+        <p>
+          Booker offers free shipping worldwide, which makes it possible for you
+          to rent a book from us even if you live far away from our head office.
+          Shipping process is fast and secure.
+        </p>
+      </div>
+      <div class="col">
+        <div>
+          <span class="fa fa-refresh easyIcon"></span>
+          <h2>EASY RETURNS</h2>
+        </div>
+        <p>
+          You can always return a book after you’ve read it. Just use a unique
+          link that can be found inside our every textbook. Then fill out a
+          special form and send the book to one of our offices.
+        </p>
+      </div>
+      <div class="col">
+        <div>
+          <span class="fa fa-sticky-note-o easyIcon"></span>
+          <h2>TAKE NOTES</h2>
+        </div>
+        <p>
+          Textbooks rented at Booker have a special section where you can take
+          notes. However, we ask all our customers to limit your writing and
+          highlighting to a minimal amount.
+        </p>
+      </div>
+      <div class="col">
+        <div>
+          <span class="fa fa-superpowers easyIcon"></span>
+          <h2>SATISFACTION GURANTEED</h2>
+        </div>
+        <p>
+          We hope that you will like our book rental service. Our team makes
+          every effort to offer you an easy and enjoyable experience of renting
+          a textbook at any time of the year.
+        </p>
+      </div>
+    </div>
+    <!-- Twitter form -->
+    <section class="twitterSec">
+      <div class="left">
+        <h1>GET THE LATEST NEWS FROM THE TEAM OF BOOKER</h1>
+        <hr /><br>
+        <p>
+          Keep up with our always upcoming news, updates, and publications.
+          Enter your e-mail and subscribe to our newsletter.
+        </p>
+        <form action="">
+          <input name="email" type="email" placeholder="Enter your e-mail"><br><br>
+          <button type="submit" >SUBSCRIBE</button>
+        </form>
+      </div>
+      <div class="right">
+        <h1>FOLLOW US FOR NEWS</h1>
+        <hr /><br>
+        <div class="fa fa-twitter"></div>
+        <div class="fa fa-twitter"></div>
+        <div class="fa fa-twitter"></div>
+      </div>
+    </section>
 
+    <!-- Footer -->
     <div class="includeHTML" w3-include-html="footer.html"></div>
     <script>
       function includeHTML() {
