@@ -133,6 +133,9 @@
   width: 90%;
   max-width: 1100px;
 }
+.mySlides img {
+  width: 55vw;
+}
 .modal .prev, .modal .next {
   cursor: pointer;
   position: absolute;

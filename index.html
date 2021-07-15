@@ -22,19 +22,23 @@
     </style>
   </head>
   <body>
-    <div id="navigationBar" class="includeHTML" w3-include-html="nav.html"></div>
+    <div
+      id="navigationBar"
+      class="includeHTML"
+      w3-include-html="nav.html"
+    ></div>
     <header class="header">
       <div id="menuBtn" onclick="showNavBar()">
         <span class="fa fa-bars"></span>
       </div>
-        <a href="index.html"><img src="aakash_img/logo.png" alt="logo" /></a>
+      <a href="index.html"><img src="aakash_img/logo.png" alt="logo" /></a>
       <span class="loginBtn"
         ><i class="fa fa-sign-in" aria-hidden="true"></i> Login</span
       >
     </header>
     <script>
       function showNavBar() {
-        document.querySelector('.nav-bar').classList.toggle('width250');
+        document.querySelector(".nav-bar").classList.toggle("width250");
       }
     </script>
     <div class="slideShow">
@@ -49,7 +53,7 @@
             We provide huge discounts on all kinds of textbooks. On our website
             you can find lots of books for study and self-development.
           </p>
-          <button  >VIEW CATALOG</button>
+          <button>VIEW CATALOG</button>
         </div>
       </div>
       <div class="slide">
@@ -60,7 +64,7 @@
             From applied literature to educational resources, we have a lot of
             textbooks to offer you. We provide only the best books for rent.
           </p>
-          <button  >VIEW CATALOG</button>
+          <button>VIEW CATALOG</button>
         </div>
       </div>
       <div class="slide">
@@ -71,7 +75,7 @@
             We regularly update our catalog with exclusive book offers from
             international authors and publishing houses.
           </p>
-          <button  >VIEW CATALOG</button>
+          <button>VIEW CATALOG</button>
         </div>
       </div>
     </div>
@@ -105,22 +109,21 @@
           }
         }
       }
-    </script>
-    <script>
       includeHTML();
     </script>
     <script src="aakash_script/index.js"></script>
     <script>
-      $(window).scroll(function(e){ 
-  var $el = $('.nav-bar'); 
-  var isPositionFixed = ($el.css('position') == 'fixed');
-  if ($(this).scrollTop() > 109 && !isPositionFixed){ 
-    $el.css({'position': 'fixed', 'top': '0px'}); 
-  }
-  if ($(this).scrollTop() < 109 && isPositionFixed){
-    $el.css({'position': 'static', 'top': '0px'}); 
-  } 
-});
+      $(window).scroll(function (e) {
+        if (document.body.clientWidth > 900 + 15) {
+          var $el = $(".nav-bar");
+          if ($(this).scrollTop() >= 109) {
+            $el.addClass("posFixed");
+          }
+          if ($(this).scrollTop() < 109) {
+            $el.removeClass("posFixed");
+          }
+        }
+      });
     </script>
   </body>
 </html>

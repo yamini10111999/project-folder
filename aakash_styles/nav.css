@@ -2,14 +2,16 @@
   box-sizing: border-box;
 }
 .nav-bar {
-  /* position: sticky; */
-  /* top: 0; */
+  top: 0;
   z-index: 2;
   width: 100%;
   display: flex;
   justify-content: center;
   background-color: rgb(50, 50, 50);
   font-family: "Roboto Condensed", sans-serif;
+}
+.posFixed {
+  position: fixed !important;
 }
 .nav-bar .nav-link {
   text-decoration: none;
@@ -93,8 +95,8 @@
 
 @media screen and (max-width: 900px) {
   .nav-bar {
-    display: none;
-    position: absolute;
+    /* display: none; */
+    position: fixed;
     top: 0;
     left: 0;
     flex-direction: column;
