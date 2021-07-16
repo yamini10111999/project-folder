@@ -20,7 +20,9 @@ function filterSelection(filter) {
   }
   this.classList.add("active");
 }
-window.onload = () => {
-  var btn = document.querySelectorAll(".filterBtn > .btn");
-  btn[0].click();
-}
+// btn[0].click();
+// window.onload = () => {
+  // var btn = document.querySelectorAll(".filterBtn > .btn");
+  // btn[0].click();
+// }
+// console.log('called', btn)

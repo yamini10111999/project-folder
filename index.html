@@ -100,7 +100,8 @@
       </div>
     </div>
     <!-- Catalog -->
-    <div class="includeHTML" w3-include-html="catalog.html"></div>
+    <div class="includeHTML" w3-include-html="catalog.html">
+    </div>
     <!-- small features(Free Shipping, Easy Returns...) -->
     <div class="Easy">
       <div class="col">
@@ -300,7 +301,23 @@
         }
       });
     </script>
+    <script>
+      var flag = 0;
+      let interval = setInterval(() => {
+        if(flag == 0){
+          var btn = document.querySelectorAll(".filterBtn > .btn");
+          btn[0].click()
+          flag = 1;
+        }
+        if(flag == 1){
+          clearInterval(interval);
+        }
+      }, 1000);
+  </script>
     <script src="aakash_script/catalog.js"></script>
-
+    <!-- <script>
+        var btn = document.querySelectorAll(".filterBtn > .btn");
+        console.log('called', btn)
+    </script> -->
   </body>
 </html>
