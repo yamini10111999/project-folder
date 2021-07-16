@@ -142,14 +142,16 @@
   font-size: larger;
 }
 .twitterSec h1,
-.news-review h1 {
+.news-review h1,
+.blog_section h1 {
   font-family: "Roboto Condensed", sans-serif;
   letter-spacing: 1.5px;
   font-size: xx-large;
 }
 .twitterSec .left hr,
 .twitterSec .right hr,
-.news-review hr {
+.news-review hr,
+.blog_section hr {
   float: left;
   width: 100px;
   background-color: #fff261;
@@ -294,4 +296,33 @@ button[type="submit"] {
   .news-review .content .right {
     width: 100%
   }
+}
+
+/* What people say / Blog */
+.blog_section {
+  display: flex;
+}
+.blog_section .left,
+.blog_section .right {
+  width: 50%;
+}
+.blog_section .right{
+  background: url(../aakash_img/whatpeepsay_right_bg.jpg);
+}
+.blog_section .left .content {
+  width: 80%;
+  margin: auto;
+}
+.blog_section .left hr {
+  background: black;
+}
+.blog_section .left .content .blogCard {
+  display: flex;
+
+}
+.blog_section .left .content .main {
+  flex: 90%;
+}
+.blog_section .left .content .side {
+  flex: 10%;
 }

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Booker - TextBook Rentals</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
     <meta lang="en" />
     <link rel="stylesheet" href="aakash_styles/header.css" />
     <link rel="stylesheet" href="aakash_styles/index.css" />
-    <script src="aakash_script/footer.js"></script>
 
     <link
       rel="stylesheet"
@@ -40,6 +40,19 @@
       class="includeHTML"
       w3-include-html="nav.html"
     ></div>
+    <script>
+      $(window).scroll(function (e) {
+        if (document.body.clientWidth > 900 + 15) {
+          var $el = $(".nav-bar");
+          if ($(this).scrollTop() >= 109) {
+            $el.addClass("posFixed");
+          }
+          if ($(this).scrollTop() < 109) {
+            $el.removeClass("posFixed");
+          }
+        }
+      });
+    </script>
     <!-- Header -->
     <header class="header">
       <div id="menuBtn" onclick="showNavBar.bind(this)()">
@@ -100,8 +113,21 @@
       </div>
     </div>
     <!-- Catalog -->
-    <div class="includeHTML" w3-include-html="catalog.html">
-    </div>
+    <div class="includeHTML" w3-include-html="catalog.html"></div>
+    <script src="aakash_script/catalog.js"></script>
+    <script>
+      var flag = 0;
+      let interval = setInterval(() => {
+        if (flag == 0) {
+          var btn = document.querySelectorAll(".filterBtn > .btn");
+          btn[0].click();
+          flag = 1;
+        }
+        if (flag == 1) {
+          clearInterval(interval);
+        }
+      }, 1000);
+    </script>
     <!-- small features(Free Shipping, Easy Returns...) -->
     <div class="Easy">
       <div class="col">
@@ -195,30 +221,27 @@
           </div>
           <div class="contentLeft">
             <p>NEWS</p>
-            <a
-              style="font-size: 1.5em; display: inline-block"
-              href="#"
+            <a style="font-size: 1.5em; display: inline-block" href="#"
               >Top 5 Web Design and Development Books to Read This Year</a
             >
-            <p style="color: rgb(92, 92, 92)" >
+            <p style="color: rgb(92, 92, 92)">
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            </p><br>
-            <a href="#">
-              CONTINUE READING
-            </a>
+            </p>
+            <br />
+            <a href="yame_html/yame7.html"> CONTINUE READING </a>
           </div>
         </div>
         <div class="right">
           <p class="ques">
-            <a href="javascript:void(0);">10 Reasons to Rent a Textbook</a>
+            <a href="yame_html/yame8.html">10 Reasons to Rent a Textbook</a>
             <span
               style="display: block; padding-top: 10px; color: rgb(92, 92, 92)"
               >Feb 27, 2018 at 5:47 pm</span
             >
           </p>
           <p class="ques">
-            <a href="javascript:void(0);"
+            <a href="yame_html/yame8.html"
               >Why Textbooks are More Beneficial than eBooks</a
             >
             <span
@@ -227,14 +250,14 @@
             >
           </p>
           <p class="ques">
-            <a href="javascript:void(0);">Should I Buy or Rent Textbooks?</a>
+            <a href="yame_html/yame8.html">Should I Buy or Rent Textbooks?</a>
             <span
               style="display: block; padding-top: 10px; color: rgb(92, 92, 92)"
               >Feb 27, 2018 at 5:47 pm</span
             >
           </p>
           <p class="ques">
-            <a href="javascript:void(0);"
+            <a href="yame_html/yame8.html"
               >Textbooks Used to Promote Global Peace</a
             >
             <span
@@ -243,7 +266,7 @@
             >
           </p>
           <p class="ques">
-            <a href="javascript:void(0);">What to Read This Summer</a>
+            <a href="yame_html/yame8.html">What to Read This Summer</a>
             <span
               style="display: block; padding-top: 10px; color: rgb(92, 92, 92)"
               >Feb 27, 2018 at 5:47 pm</span
@@ -251,12 +274,33 @@
           </p>
         </div>
       </div>
-      <div style="text-align: center;" >
-        <a href="#">VIEW ALL NEWS</a>
+      <div style="text-align: center">
+        <a href="yame_html/yame1.html">VIEW ALL NEWS</a>
+      </div>
+    </section>
+    <!-- Blog Section / (What people say?)-->
+    <section class="blog_section">
+      <div class="left">
+        <div class="content">
+          <h1>WHAT PEOPLE SAY</h1>
+          <hr><br><br>
+          <div class="blogCard">
+            <div class="main">
+
+            </div>
+            <div class="side">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+over 40000+ download
       </div>
     </section>
     <!-- Footer -->
     <div class="includeHTML" w3-include-html="footer.html"></div>
+    <script src="aakash_script/footer.js"></script>
     <script>
       function includeHTML() {
         var z, i, elmnt, file, xhttp;
@@ -287,37 +331,7 @@
       }
       includeHTML();
     </script>
+    <!-- Page End -->
     <script src="aakash_script/index.js"></script>
-    <script>
-      $(window).scroll(function (e) {
-        if (document.body.clientWidth > 900 + 15) {
-          var $el = $(".nav-bar");
-          if ($(this).scrollTop() >= 109) {
-            $el.addClass("posFixed");
-          }
-          if ($(this).scrollTop() < 109) {
-            $el.removeClass("posFixed");
-          }
-        }
-      });
-    </script>
-    <script>
-      var flag = 0;
-      let interval = setInterval(() => {
-        if(flag == 0){
-          var btn = document.querySelectorAll(".filterBtn > .btn");
-          btn[0].click()
-          flag = 1;
-        }
-        if(flag == 1){
-          clearInterval(interval);
-        }
-      }, 1000);
-  </script>
-    <script src="aakash_script/catalog.js"></script>
-    <!-- <script>
-        var btn = document.querySelectorAll(".filterBtn > .btn");
-        console.log('called', btn)
-    </script> -->
   </body>
 </html>

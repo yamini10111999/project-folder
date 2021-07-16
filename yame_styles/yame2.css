@@ -1,0 +1,163 @@
+body{
+    background-color: rgb(241, 234, 234);
+}
+.cardsec{
+    margin-left: 5px;
+}
+.img{
+    height: 400px;
+    width: 100%;
+    position: relative;
+}
+.ptag{
+    margin: 0 15px;
+}
+.pptag{
+    margin-left: 100px;
+}
+.fas.fa-comment-alt.ico{
+    margin-left: 20px;
+}
+.blogsec{
+    position: absolute;
+    top:13%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+}
+.h5tag{
+    font-size: 25px;
+    font-weight: 300;
+    padding: 30px 30px;
+    font-weight: 500;
+}
+.tag{
+    margin-top: 7%;
+    font-size: 24px;
+}
+.h2tag{
+    font-size: 50px;
+    padding: 5px 6px;
+    font-weight: 700;
+    
+}
+.pp{
+    margin-left: 50%;
+}
+.input{
+    border: 1px solid white;
+    padding: 10px 50px;
+    margin-left: 30px;
+}
+.ullist{
+    margin-left: 40px;
+    list-style-type: none;
+
+}
+.p2tag{
+    margin-left: 30px;
+    justify-content: center;
+    padding: 0;
+}
+.grey{
+    margin-left: 35px;
+    color: gray;
+    padding: 0;
+}
+.btn.btn-secondary.or{
+    margin-left: 30px;
+}
+.card-img-top.or{
+    position: relative;
+}
+.htag{
+    position: absolute;
+    justify-content: center;
+    top:100px;
+    font-size: 27px;
+    font-family: cursive;
+    margin-left: 5px;
+}
+.far.fa-play-circle.music{
+    position: absolute;
+    color: white;
+    font-size: 70px;
+    top:25%;
+    left: 50%;
+}
+.fas.fa-search.in{
+    font-size: 35px;
+    background-color: yellow;
+    border-radius: 10px;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+.card-img-top.zoo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.card-title.tit{
+    font-size:25px;
+}
+.cardsec{
+    margin: 10px 0;
+}
+.card.or{
+    margin: 7px;
+}
+.btn.btn-lg.btn-primary.or{
+    border-radius: 20px;
+}
+.btn.btn-lg.btn-primary.or:hover{
+    background-color: yellow;
+    color: black;
+}
+
+
+/* Responsive design */
+@media (max-width: 800px) {
+    .d-flex.or{
+        flex-direction: column !important;
+    }
+    .card.or{
+        width: 100% !important;
+    }
+    .pp{
+        margin-left: 40%;
+    }
+    .htag{
+        font-size:110%;
+        top:70px;
+    }
+    .card-title.tit{
+        font-size: 26px;
+    }
+    .card-img-top.zoo:hover{
+        transform: scale(1.0);
+        cursor: pointer;
+    }
+    .far.fa-play-circle.music{
+        top:18%;
+        font-size: 50px;
+    }
+    .h2tag{
+        padding:25px 0;
+        font-size: 40px;
+    
+    }
+    .tag{
+         margin-top:5%;
+         font-size: 20px;
+    }
+    .input{
+        padding: 10px 0 !important;
+        width: 60%;
+    }
+    .ptag{
+        font-size: 12px;
+    }
+    .pptag{
+        margin-left: 25%;
+    }
+}
