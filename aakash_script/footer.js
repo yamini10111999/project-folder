@@ -19,6 +19,7 @@ function changeSlide(n){
 }
 
 function showSlide(index) {
+  
   if(index > slides.length - 1) currentSlide = 0;
   if(index < 0) currentSlide = slides.length - 1;
 

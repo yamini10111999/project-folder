@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+.filterBtn {
+  text-align: center;
+  padding: 50px 0;
+}
+.filterBtn .btn {
+  background-color: initial;
+  border: 2px solid rgb(201, 201, 201);
+  font-size: medium;
+  margin-bottom: 10px;
+}
+.filterBtn .btn:hover,
+.filterBtn .active {
+  background-color: #fff586;
+  border-color: #fff586;
+}
+
+.card_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+.card-row {
+  width: 22%;
+  display: none;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+}
+.cards {
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.cards img {
+  width: 100%;
+  padding: 8% 18%;
+}
+.cards h3 {
+  font-weight: normal;
+}
+
+.cards:hover,
+.btn:hover,
+.btn2:hover {
+  transform: translateY(-0.3%);
+  box-shadow: 0 1rem 1rem rgb(87, 85, 85);
+  transition: 0.75s;
+}
+.btn {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  font-size: large;
+  background-color: #fff586;
+  cursor: pointer;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.scale1 {
+  animation: animScale1 0.4s forwards;
+  display: block;
+}
+.scale0 {
+  /* animation: animScale0 0.4s forwards; */
+  display: none;
+}
+@keyframes animScale1 {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/* @keyframes animScale0 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+} */
+
+@media screen and (max-width:800px){
+    .card-row {
+        width: 47%;
+      }
+}
+@media screen and (max-width:600px){
+    .card-row {
+        width: 80%;
+        margin: auto;
+    }
+    .filterBtn {
+        text-align: initial;
+    }
+}
+
+
