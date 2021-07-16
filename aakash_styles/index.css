@@ -1,3 +1,4 @@
+/* container of navigation bar/ navigation bar includer div */
 @media screen and (max-width: 900px) {
   #navigationBar {
     position: fixed;
