@@ -263,7 +263,7 @@ button[type="submit"] {
   text-decoration: none;
 }
 .news-review .content .left .contentLeft > a:nth-of-type(1):hover {
-  color:rgb(90, 90, 90)
+  color: rgb(90, 90, 90);
 }
 .news-review .content .left .contentLeft > a:nth-of-type(2),
 .news-review > div:nth-of-type(3) > a {
@@ -288,13 +288,13 @@ button[type="submit"] {
   color: rgb(90, 90, 90);
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   .news-review .content {
     flex-wrap: wrap;
   }
   .news-review .content .left,
   .news-review .content .right {
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -306,23 +306,89 @@ button[type="submit"] {
 .blog_section .right {
   width: 50%;
 }
-.blog_section .right{
+.blog_section .right {
   background: url(../aakash_img/whatpeepsay_right_bg.jpg);
+  background-position: center;
+  padding-bottom: 80px;
+  padding-top: 80px;
 }
 .blog_section .left .content {
   width: 80%;
   margin: auto;
+  padding: 100px 0;
 }
 .blog_section .left hr {
   background: black;
 }
 .blog_section .left .content .blogCard {
   display: flex;
-
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px #c5c5c5;
 }
-.blog_section .left .content .main {
-  flex: 90%;
+.blog_section .left .content .main .top-part {
+  display: flex;
+}
+.blog_section .left .content .main .dp-container {
+  width: 20%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.blog_section .left .content .main .dp-container img {
+  border-radius: 50%;
+}
+.blog_section .left .content .main .dp-text {
+  width: 60%;
+}
+.blog_section .left .content .main .quote p {
+  width: 100%;
+  padding: 10px 20px 30px 20px;
 }
 .blog_section .left .content .side {
-  flex: 10%;
+  background: #fff586;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.fa-quote-right {
+  color:rgb(121, 121, 121);
+  font-size: xx-large !important;
+}
+.blog_section .left .content .side button {
+  border-radius: 50%;
+  border: none;
+  display: block;
+  width: 30px;
+  margin: 10px;
+  height: 30px;
+  line-height: 10px;
+  padding: inherit;
+  background: black;
+  color: #fff586;
+}
+@media screen and (max-width:800px){
+  .blog_section {
+    flex-wrap: wrap;
+  }
+  .blog_section .left,
+  .blog_section .right {
+    width: 100%;
+  }
+  .blogCard {
+    flex-wrap: wrap;
+  }
+  .blogCard .main-container,
+  .blogCard .side {
+    width: 100%;
+  }
+  .blog_section .left .content .side {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .blog_section .left .side > .blog-btn {
+    display: flex;
+  }
 }

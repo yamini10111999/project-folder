@@ -283,21 +283,118 @@
       <div class="left">
         <div class="content">
           <h1>WHAT PEOPLE SAY</h1>
-          <hr><br><br>
+          <hr />
+          <br /><br />
           <div class="blogCard">
-            <div class="main">
-
+            <div class="main-container">
+              <div class="main">
+                <div class="top-part">
+                  <div class="dp-container">
+                    <img
+                      style="width: 100%;"
+                      src="aakash_img/quote-user-1.jpg"
+                      alt="user1quote"
+                    />
+                  </div>
+                  <div class="dp-text">
+                    <h2>James Smith</h2>
+                    <p>
+                      <i style="color: rgb(104, 104, 104);" >Regular Client</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="quote">
+                  <p>
+                    The books I rent here always arrive on time, which is of
+                    primary importance to me as I like to read a lot. I am
+                    especially interested in books about business and science and
+                    you have a diverse collection of them. Thank you for your
+                    service!
+                  </p>
+                </div>
+              </div>
+              <div class="main">
+                <div class="top-part">
+                  <div class="dp-container">
+                    <img
+                      style="width: 100%"
+                      src="aakash_img/quote-user-2.jpg"
+                      alt="user1quote"
+                    />
+                  </div>
+                  <div class="dp-text">
+                    <h2>Mary McMillan</h2>
+                    <p>
+                      <i style="color: rgb(104, 104, 104);" >Regular Client</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="quote">
+                  <p>
+                    As an avid reader and web developer, I always use your website
+                    to find and rent new books. Sometimes I even rent exclusives
+                    that are not available at bookstores. I especially like your
+                    collection of JavaScript and PHP guides, they are very
+                    helpful.
+                  </p>
+                </div>
+              </div>
+              <div class="main">
+                <div class="top-part">
+                  <div class="dp-container">
+                    <img
+                      style="width: 100%"
+                      src="aakash_img/quote-user-3.jpg"
+                      alt="user1quote"
+                    />
+                  </div>
+                  <div class="dp-text">
+                    <h2>Samuel Contreras</h2>
+                    <p>
+                      <i style="color: rgb(104, 104, 104);" >Regular Client</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="quote">
+                  <p>
+                    Thanks to Booker, I saved over $140 just on one book! The
+                    customer service was top-notch and everyone there was very
+                    friendly. I will be back for next semester and I will
+                    definitely tell my friends about your website. Thanks a lot
+                    for your great customer service!
+                  </p>
+                </div>
+              </div>
             </div>
             <div class="side">
-
+              <div>
+                <i class="fa fa-quote-right" aria-hidden="true"></i>
+              </div>
+              <div class="blog-btn">
+                <button onclick="changeBlog(-1)" class="prev">&#10094;</button>
+                <button onclick="changeBlog(1)" class="next">&#10095;</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="right">
-over 40000+ download
-      </div>
+      <div class="right">over 40000+ download</div>
     </section>
+    <script>
+      let currBlog = 0;
+      let blog_card = document.querySelectorAll('.blogCard .main')
+      changeBlog(0);
+      function changeBlog(n) {
+        currBlog += n;
+        if(currBlog > blog_card.length - 1) currBlog = 0;
+        if(currBlog < 0) currBlog = blog_card.length - 1;
+
+        for(let b = 0; b < blog_card.length; b++){
+          blog_card[b].style.display = 'none';
+        }
+        blog_card[currBlog].style.display = 'block';
+      }
+    </script>
     <!-- Footer -->
     <div class="includeHTML" w3-include-html="footer.html"></div>
     <script src="aakash_script/footer.js"></script>
