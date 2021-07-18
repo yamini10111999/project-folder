@@ -7,7 +7,6 @@
     <meta lang="en" />
     <link rel="stylesheet" href="aakash_styles/header.css" />
     <link rel="stylesheet" href="aakash_styles/index.css" />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -86,7 +85,7 @@
             We provide huge discounts on all kinds of textbooks. On our website
             you can find lots of books for study and self-development.
           </p>
-          <button>VIEW CATALOG</button>
+          <button onclick="window.open('shop4.html', '_parent')" >VIEW CATALOG</button>
         </div>
       </div>
       <div class="slide">
@@ -97,7 +96,7 @@
             From applied literature to educational resources, we have a lot of
             textbooks to offer you. We provide only the best books for rent.
           </p>
-          <button>VIEW CATALOG</button>
+          <button onclick="window.open('shop4.html', '_parent')" >VIEW CATALOG</button>
         </div>
       </div>
       <div class="slide">
@@ -108,7 +107,7 @@
             We regularly update our catalog with exclusive book offers from
             international authors and publishing houses.
           </p>
-          <button>VIEW CATALOG</button>
+          <button onclick="window.open('shop4.html', '_parent')" >VIEW CATALOG</button>
         </div>
       </div>
     </div>
@@ -194,9 +193,11 @@
     </section>
     <script>
       document.getElementById('uploadFile').addEventListener('change', (e) => {
-        file_path = e.currentTarget.value;
+        let file_path = e.currentTarget.value;
+        let find = '\\';
+        debugger
         if(file_path == '') file_path = 'No file chosen';
-        else file_path = file_path.slice(file_path.lastIndexOf('\\')+1);
+        else file_path = file_path.slice(file_path.lastIndexOf(`\\`)+1);
         document.getElementById('filePath').innerHTML = file_path;
       })
     </script>
@@ -239,14 +240,14 @@
           <div class="imageLeft">
             <img src="aakash_img/new-reviewsSection.jpg" alt="news-reviews" />
             <div>
-              <span>by</span><a href="javascript:void(0);">Ronald Chen</a>
+              <span>by</span><a href="Janani part/aboutMe.html">Ronald Chen</a>
               <span>|</span>
               <span>Feb 27, 2018 at 5:47 pm</span>
             </div>
           </div>
           <div class="contentLeft">
             <p>NEWS</p>
-            <a style="font-size: 1.5em; display: inline-block" href="#"
+            <a style="font-size: 1.5em; display: inline-block" href="yame_html/yame8.html"
               >Top 5 Web Design and Development Books to Read This Year</a
             >
             <p style="color: rgb(92, 92, 92)">
@@ -254,7 +255,7 @@
               nisi ut aliquip ex ea commodo consequat. Duis aute irure
             </p>
             <br />
-            <a href="yame_html/yame7.html"> CONTINUE READING </a>
+            <a href="yame_html/yame8.html"> CONTINUE READING </a>
           </div>
         </div>
         <div class="right">
