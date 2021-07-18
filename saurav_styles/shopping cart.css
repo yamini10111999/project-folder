@@ -28,12 +28,6 @@ table {
     justify-content: center;
     text-align: center;
   }
-
-
-
-
-
-  
 .table-box
 {
     margin: 50px auto;
@@ -107,9 +101,20 @@ label {
     cursor: pointer;
     font-size: 17px;
 }
-
 .btn:hover {
     background-color: #45a049;
+}
+
+.btn2 {
+    background-color: #96f560;
+    color: black;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+} 
+.btn2:hover {
+    background-color: #a99df0;
 }
 
 @media only screen and (max-width: 600px) {
