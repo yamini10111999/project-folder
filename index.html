@@ -175,6 +175,31 @@
         </p>
       </div>
     </div>
+    <!-- Upload Books -->
+    <section class="upload-book">
+      <div class="left"></div>
+      <div class="right">
+        <h1>
+          Got some books to upload...<br />
+          you can upload your books here...
+        </h1>
+          <form action="">
+            <label class="custom-file-upload">Click here to choose your file
+              <input id="uploadFile" type="file" style="display: none;" />
+            </label><br><br>
+            <span id="filePath" >No file chosen</span><br><br>
+            <button class="fileBtn" type="submit">Upload</button>
+          </form>
+      </div>
+    </section>
+    <script>
+      document.getElementById('uploadFile').addEventListener('change', (e) => {
+        file_path = e.currentTarget.value;
+        if(file_path == '') file_path = 'No file chosen';
+        else file_path = file_path.slice(file_path.lastIndexOf('\\')+1);
+        document.getElementById('filePath').innerHTML = file_path;
+      })
+    </script>
     <!-- Twitter section -->
     <section class="twitterSec">
       <div class="left">
@@ -291,7 +316,7 @@
                 <div class="top-part">
                   <div class="dp-container">
                     <img
-                      style="width: 100%;"
+                      style="width: 100%"
                       src="aakash_img/quote-user-1.jpg"
                       alt="user1quote"
                     />
@@ -299,7 +324,7 @@
                   <div class="dp-text">
                     <h2>James Smith</h2>
                     <p>
-                      <i style="color: rgb(104, 104, 104);" >Regular Client</i>
+                      <i style="color: rgb(104, 104, 104)">Regular Client</i>
                     </p>
                   </div>
                 </div>
@@ -307,9 +332,9 @@
                   <p>
                     The books I rent here always arrive on time, which is of
                     primary importance to me as I like to read a lot. I am
-                    especially interested in books about business and science and
-                    you have a diverse collection of them. Thank you for your
-                    service!
+                    especially interested in books about business and science
+                    and you have a diverse collection of them. Thank you for
+                    your service!
                   </p>
                 </div>
               </div>
@@ -325,17 +350,17 @@
                   <div class="dp-text">
                     <h2>Mary McMillan</h2>
                     <p>
-                      <i style="color: rgb(104, 104, 104);" >Regular Client</i>
+                      <i style="color: rgb(104, 104, 104)">Regular Client</i>
                     </p>
                   </div>
                 </div>
                 <div class="quote">
                   <p>
-                    As an avid reader and web developer, I always use your website
-                    to find and rent new books. Sometimes I even rent exclusives
-                    that are not available at bookstores. I especially like your
-                    collection of JavaScript and PHP guides, they are very
-                    helpful.
+                    As an avid reader and web developer, I always use your
+                    website to find and rent new books. Sometimes I even rent
+                    exclusives that are not available at bookstores. I
+                    especially like your collection of JavaScript and PHP
+                    guides, they are very helpful.
                   </p>
                 </div>
               </div>
@@ -351,7 +376,7 @@
                   <div class="dp-text">
                     <h2>Samuel Contreras</h2>
                     <p>
-                      <i style="color: rgb(104, 104, 104);" >Regular Client</i>
+                      <i style="color: rgb(104, 104, 104)">Regular Client</i>
                     </p>
                   </div>
                 </div>
@@ -378,21 +403,47 @@
           </div>
         </div>
       </div>
-      <div class="right">over 40000+ download</div>
+      <div class="right">
+        <div class="row">
+          <p>
+            <i class="fa fa-file-text" aria-hidden="true"></i><br />
+            62 000+
+            <br />
+            textbooks
+          </p>
+          <p>
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <br />2466<br />
+            Active Readers
+          </p>
+        </div>
+        <div class="row">
+          <p>
+            <i class="fa fa-trophy" aria-hidden="true"></i>
+            <br />12 +<br />
+            Awards
+          </p>
+          <p>
+            <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
+            <br />520<br />
+            Authors
+          </p>
+        </div>
+      </div>
     </section>
     <script>
       let currBlog = 0;
-      let blog_card = document.querySelectorAll('.blogCard .main')
+      let blog_card = document.querySelectorAll(".blogCard .main");
       changeBlog(0);
       function changeBlog(n) {
         currBlog += n;
-        if(currBlog > blog_card.length - 1) currBlog = 0;
-        if(currBlog < 0) currBlog = blog_card.length - 1;
+        if (currBlog > blog_card.length - 1) currBlog = 0;
+        if (currBlog < 0) currBlog = blog_card.length - 1;
 
-        for(let b = 0; b < blog_card.length; b++){
-          blog_card[b].style.display = 'none';
+        for (let b = 0; b < blog_card.length; b++) {
+          blog_card[b].style.display = "none";
         }
-        blog_card[currBlog].style.display = 'block';
+        blog_card[currBlog].style.display = "block";
       }
     </script>
     <!-- Footer -->
