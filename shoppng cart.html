@@ -6,17 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cartt</title>
-    <link rel="stylesheet" href="saurav_styles/shopping cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
     <script src="addtocart.js"></script>
+    <link rel="stylesheet" href="saurav_styles/shopping cart.css">
 </head>
 
 <body>
+
     <div class="upper col-12 col-s-12">
         <h1>Shop</h1>
         <p style="font-size: 70px;">SHOPPING CART</p>
         <h3>Home -> Catalog -> Shopping Cart</h3>
     </div>
-    
     <button onclick="addItem()">Add Item</button>
     <div class="table-box">
         <div class="table-row table-head">
@@ -29,11 +30,8 @@
             <div class="table-cell">
                 <p>Price</p>
             </div>
-            <div class="table-cell">
-                <p>1</p>
-            </div>
             <div class="table-cell last-cell">
-                <button class="btn2">Remove</button>
+                <p>Quantity</p>
             </div>
         </div>
 
@@ -47,48 +45,24 @@
             <div class="table-cell">
                 <p>$29.00</p>
             </div>
-            <div class="table-cell">
+            <div class="table-cell last-cell">
                 <p>1</p>
             </div>
+        </div>
             <div class="table-cell last-cell">
                 <button class="btn2">Remove</button>
             </div>
         </div>
-
-        <div class="table-row">
-            <div class="table-cell first-cell">
-                <p>1</p>
-            </div>
-            <div class="table-cell">
-                <p>Immutable Laws of Marketing</p>
-            </div>
-            <div class="table-cell">
-                <p>$29.00</p>
-            </div>
-            <div class="table-cell">
-                <p>1</p>
-            </div>
-            <div class="table-cell last-cell">
-                <button class="btn2">Remove</button>
-            </div>
-        </div>
+      
     </div>
-
     <div class="code">
-
         <div class="coupon">
             <input type="text" name="coup" id="" placeholder="Enter coupon code">
-
             <div class="press">
-
                 <button class="btn">APPLY COUPON</button>
                 <button onclick="window.open('shipping.html', '_parent')" class="btn">CHECKOUT</button>
             </div>
         </div>
     </div>
-
-
-
 </body>
-
 </html>
