@@ -46,8 +46,7 @@
 .slideContent button:hover,
 .custom-file-upload:hover,
 .twitterSec button[type="submit"]:hover,
-.news-review > div:nth-of-type(3) > a:hover
-{
+.news-review > div:nth-of-type(3) > a:hover {
   transform: translateY(-0.3%);
   box-shadow: 0 1rem 1rem rgb(87, 85, 85);
   transition: 0.75s;
@@ -437,7 +436,8 @@ button[type="submit"] {
 }
 
 .upload-book {
-  background-image: linear-gradient(black, black), url(../aakash_img/image05.jpg);
+  background-image: linear-gradient(black, black),
+    url(../aakash_img/image05.jpg);
   background-blend-mode: screen;
   background-size: cover;
 }
@@ -449,13 +449,13 @@ button[type="submit"] {
   display: inline-block;
 }
 #filePath {
-  background-color:rgb(87, 85, 85);
+  background-color: rgb(87, 85, 85);
   border-radius: 5px;
   padding: 5px;
   color: white;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
   .upload-book .right .custom-file-upload {
     font-size: small;
   }

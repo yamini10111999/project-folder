@@ -2,14 +2,18 @@ window.onload = () => {
   let addBtn = document.querySelectorAll(".cards .btn");
   for (let i = 0; i < addBtn.length; i++) {
     addBtn[i].addEventListener("click", (e) => {
-      console.log('btn clicked')
+      const Btn = e.currentTarget;
       let a, b;
-      a = e.currentTarget.parentElement.children[1].innerHTML;
-      b = e.currentTarget.parentElement.children[2].innerHTML;
+      a = Btn.parentElement.children[1].innerHTML;
+      b = Btn.parentElement.children[2].innerHTML;
       storeItem(a, b);
+      Btn.classList.add('added');
+      setTimeout( function() {
+        Btn.classList.remove('added')
+      }, 2000);
     });
   }
-}
+};
 
 var arr = [];
 let storage = JSON.parse(localStorage.getItem("books"));
@@ -38,7 +42,7 @@ function storeItem(a = "Dummy", b = "$5.00", c = 1) {
 function getAllItem() {
   let getArr = JSON.parse(localStorage.getItem("books"));
   for (let i = 0; i < getArr.length; i++) {
-    addItem(getArr[i], i+1);
+    addItem(getArr[i], i + 1);
   }
 }
 
@@ -77,4 +81,20 @@ function removeItem(item) {
     }
   }
   localStorage.setItem("books", JSON.stringify(arr));
+  emptyCheck();
 }
+
+function emptyCheck() {
+  let z = JSON.parse(localStorage.getItem("books"));
+  let itemLength = Object.keys(z).length;
+  console.log('emptycheck', itemLength)
+    if (itemLength < 1) {
+      document.getElementsByClassName("Cart")[0].style.display = "none";
+      document.getElementsByClassName("emptyCart")[0].style.display =
+        "block";
+    } else {
+      document.getElementsByClassName("Cart")[0].style.display = "block";
+      document.getElementsByClassName("emptyCart")[0].style.display =
+        "none";
+    }
+  }

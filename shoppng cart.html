@@ -64,7 +64,6 @@
 
     <script>
       getAllItem();
-
       let removeBtn = document.querySelectorAll(
         ".table-box > .table-row button.btn2"
       );
@@ -72,23 +71,17 @@
         removeBtn[i].addEventListener("click", (e) => {
           let item = e.currentTarget.parentElement.parentElement;
           removeItem(item);
-          emptyCheck();
         });
       }
-      function emptyCheck() {
-        let z = JSON.parse(localStorage.getItem("books"));
-        let itemLength = Object.keys(z).length;
-        if (itemLength < 1) {
-          document.getElementsByClassName("Cart")[0].style.display = "none";
-          document.getElementsByClassName("emptyCart")[0].style.display =
-            "block";
-        } else {
-          document.getElementsByClassName("Cart")[0].style.display = "block";
-          document.getElementsByClassName("emptyCart")[0].style.display =
-            "none";
-        }
+    </script>
+    <script>
+      let z = JSON.parse(localStorage.getItem("books"));
+      if (z == null){
+        document.getElementsByClassName("Cart")[0].style.display = "none";
+        document.getElementsByClassName("emptyCart")[0].style.display = "block";
+      } else {
+          emptyCheck();
       }
-      emptyCheck();
     </script>
   </body>
 </html>
