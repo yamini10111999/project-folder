@@ -8,6 +8,7 @@
     <title>Shop Column Layout</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="saurav_styles/shop4.css">
+    <script src="addtocart.js"></script>
 </head>
 
 <body>
@@ -43,7 +44,6 @@
                     <img src="saurav_img/shop4/Immutable Laws of Marketing.jpg" alt="">
                     <h3>Immutable Laws of Marketing</h3>
                     <h3>$27.00</h3>
-                    <button onclick="addtocart()"></button>
                     <button class="btn">Add to cart</button>
                 </div>
 
@@ -54,7 +54,6 @@
                     <img src="saurav_img/shop4/The art of leadership.jpg" alt="">
                     <h3>The Art of leadership</h3>
                     <h3>$27.00</h3>
-                    <button onclick="addtocart()"></button>
                     <button class="btn">Add to cart</button>
 
                 </div>
@@ -66,7 +65,6 @@
                     <img src="saurav_img/shop4/basic of web design.jpg" alt="">
                     <h3>The Basic of Web Design</h3>
                     <h3>$27.00</h3>
-                    <button onclick="addtocart()"></button>
                     <button class="btn">Add to cart</button>
 
                 </div>
@@ -78,7 +76,6 @@
                     <img src="saurav_img/shop4/grid system.jpg" alt="">
                     <h3>Grid System in Web Design</h3>
                     <h3>$27.00</h3>
-                    <button onclick="addtocart()"></button>
                     <button class="btn">Add to cart</button>
 
                 </div>
@@ -90,7 +87,6 @@
                     <img src="saurav_img/shop4/tools that.jpg" alt="">
                     <h3>Tools That Reveal Why Your Users Abandon Your Website</h3>
                     <h3>$27.00</h3>
-                    <button onclick="addtocart()"></button>
                     <button class="btn">Add to cart</button>
 
                 </div>
@@ -102,7 +98,6 @@
                     <img src="saurav_img/shop4/dangerious side.jpg" alt="">
                     <h3>Dangerous Side Effects of Bad Customer Service</h3>
                     <h3>$27.00</h3>
-                    <button onclick="addtocart()"></button>
                     <button class="btn">Add to cart</button>
 
                 </div>
@@ -114,7 +109,6 @@
                     <img src="saurav_img/shop4/intro guide.jpg" alt="">
                     <h3>Intro Guide to UX Reviews for Web Designers</h3>
                     <h3>$27.00</h3>
-                    <button onclick="addtocart()"></button>
                     <button class="btn">Add to cart</button>
 
                 </div>
@@ -126,7 +120,6 @@
                     <img src="saurav_img/shop4/how to create.jpg" alt="">
                     <h3>How to Create a Web Design Style Guide</h3>
                     <h3>$27.00</h3>
-                    <button onclick="addtocart()"></button>
                     <button class="btn">Add to cart</button>
 
                 </div>
@@ -150,7 +143,17 @@
         <button class="btn2"> 6 </button>
 
     </div>
-
+    <!-- <script>
+        let addBtn = document.querySelectorAll(".card-row .cards .btn");
+        for (let i = 0; i < addBtn.length; i++) {
+          addBtn[i].addEventListener("click", (e) => {
+            let a, b;
+            a = e.currentTarget.parentElement.children[1].innerHTML;
+            b = e.currentTarget.parentElement.children[2].innerHTML;
+            storeItem(a, b);
+          });
+        }
+    </script> -->
 </body>
 
 </html>

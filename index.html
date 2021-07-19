@@ -127,15 +127,15 @@
         if (flag == 0) {
           var btn = document.querySelectorAll(".filterBtn > .btn");
           btn[0].click();
-          let addBtn = document.querySelectorAll(".card-row .cards .btn");
-          for (let i = 0; i < addBtn.length; i++) {
-            addBtn[i].addEventListener("click", (e) => {
-              let a, b;
-              a = e.currentTarget.parentElement.children[1].innerHTML;
-              b = e.currentTarget.parentElement.children[2].innerHTML;
-              storeItem(a, b);
-            });
-          }
+          // let addBtn = document.querySelectorAll(".card-row .cards .btn");
+          // for (let i = 0; i < addBtn.length; i++) {
+          //   addBtn[i].addEventListener("click", (e) => {
+          //     let a, b;
+          //     a = e.currentTarget.parentElement.children[1].innerHTML;
+          //     b = e.currentTarget.parentElement.children[2].innerHTML;
+          //     storeItem(a, b);
+          //   });
+          // }
           flag = 1;
         }
         if (flag == 1) {

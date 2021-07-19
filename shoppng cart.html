@@ -1,71 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cartt</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
     <script src="addtocart.js"></script>
-    <link rel="stylesheet" href="saurav_styles/shopping cart.css">
-</head>
+    <link rel="stylesheet" href="saurav_styles/shopping cart.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="upper col-12 col-s-12">
-        <h1>Shop</h1>
-        <p style="font-size: 70px;">SHOPPING CART</p>
-        <h3>Home -> Catalog -> Shopping Cart</h3>
+      <h1>Shop</h1>
+      <p style="font-size: 70px">SHOPPING CART</p>
+      <h3>Home -> Catalog -> Shopping Cart</h3>
     </div>
-    <button onclick="addItem()">Add Item</button>
-    <div class="table-box">
-        <div class="table-row table-head">
-            <div class="table-cell first-cell">
-                <p>#</p>
-            </div>
-            <div class="table-cell">
-                <p>Products</p>
-            </div>
-            <div class="table-cell">
-                <p>Price</p>
-            </div>
-            <div class="table-cell">
-                <p>Quantity</p>
-            </div>
-            <div class="table-cell last-cell">
-                <p>Remove item</p>
-            </div>
-        </div>
 
-        <div class="table-row">
-            <div class="table-cell first-cell">
-                <p>1</p>
-            </div>
-            <div class="table-cell">
-                <p>Immutable Laws of Marketing</p>
-            </div>
-            <div class="table-cell">
-                <p>$29.00</p>
-            </div>
-            <div class="table-cell last-cell">
-                <p>1</p>
-            </div>
+    <div class="Cart">
+      <div class="table-box">
+        <div class="table-row table-head">
+          <div class="table-cell first-cell">
+            <p>#</p>
+          </div>
+          <div class="table-cell">
+            <p>Products</p>
+          </div>
+          <div class="table-cell">
+            <p>Price</p>
+          </div>
+          <div class="table-cell">
+            <p>Quantity</p>
+          </div>
+          <div class="table-cell last-cell">
+            <p>Remove item</p>
+          </div>
         </div>
-            <div class="table-cell last-cell">
-                <button class="btn2">Remove</button>
-            </div>
-        </div>
-      
-    </div>
-    <div class="code">
+      </div>
+      <div class="code">
         <div class="coupon">
-            <input type="text" name="coup" id="" placeholder="Enter coupon code">
-            <div class="press">
-                <button class="btn">APPLY COUPON</button>
-                <button onclick="window.open('shipping.html', '_parent')" class="btn">CHECKOUT</button>
-            </div>
+          <input
+            type="text"
+            name="coup"
+            id=""
+            placeholder="Enter coupon code"
+          />
+          <div class="press">
+            <button class="btn">APPLY COUPON</button>
+            <button
+              onclick="window.open('shipping.html', '_parent')"
+              class="btn"
+            >
+              CHECKOUT
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+    <div class="emptyCart table-head table-row">Your cart is empty.</div>
+
+    <script>
+      getAllItem();
+
+      let removeBtn = document.querySelectorAll(
+        ".table-box > .table-row button.btn2"
+      );
+      for (let i = 0; i < removeBtn.length; i++) {
+        removeBtn[i].addEventListener("click", (e) => {
+          let item = e.currentTarget.parentElement.parentElement;
+          removeItem(item);
+          emptyCheck();
+        });
+      }
+      function emptyCheck() {
+        let z = JSON.parse(localStorage.getItem("books"));
+        let itemLength = Object.keys(z).length;
+        if (itemLength < 1) {
+          document.getElementsByClassName("Cart")[0].style.display = "none";
+          document.getElementsByClassName("emptyCart")[0].style.display =
+            "block";
+        } else {
+          document.getElementsByClassName("Cart")[0].style.display = "block";
+          document.getElementsByClassName("emptyCart")[0].style.display =
+            "none";
+        }
+      }
+      emptyCheck();
+    </script>
+  </body>
 </html>
