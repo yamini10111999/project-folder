@@ -85,7 +85,9 @@
             We provide huge discounts on all kinds of textbooks. On our website
             you can find lots of books for study and self-development.
           </p>
-          <button onclick="window.open('shop4.html', '_parent')" >VIEW CATALOG</button>
+          <button onclick="window.open('shop4.html', '_parent')">
+            VIEW CATALOG
+          </button>
         </div>
       </div>
       <div class="slide">
@@ -96,7 +98,9 @@
             From applied literature to educational resources, we have a lot of
             textbooks to offer you. We provide only the best books for rent.
           </p>
-          <button onclick="window.open('shop4.html', '_parent')" >VIEW CATALOG</button>
+          <button onclick="window.open('shop4.html', '_parent')">
+            VIEW CATALOG
+          </button>
         </div>
       </div>
       <div class="slide">
@@ -107,19 +111,31 @@
             We regularly update our catalog with exclusive book offers from
             international authors and publishing houses.
           </p>
-          <button onclick="window.open('shop4.html', '_parent')" >VIEW CATALOG</button>
+          <button onclick="window.open('shop4.html', '_parent')">
+            VIEW CATALOG
+          </button>
         </div>
       </div>
     </div>
     <!-- Catalog -->
     <div class="includeHTML" w3-include-html="catalog.html"></div>
     <script src="aakash_script/catalog.js"></script>
+    <script src="addtocart.js"></script>
     <script>
       var flag = 0;
       let interval = setInterval(() => {
         if (flag == 0) {
           var btn = document.querySelectorAll(".filterBtn > .btn");
           btn[0].click();
+          let addBtn = document.querySelectorAll(".card-row .cards .btn");
+          for (let i = 0; i < addBtn.length; i++) {
+            addBtn[i].addEventListener("click", (e) => {
+              let a, b;
+              a = e.currentTarget.parentElement.children[1].innerHTML;
+              b = e.currentTarget.parentElement.children[2].innerHTML;
+              storeItem(a, b);
+            });
+          }
           flag = 1;
         }
         if (flag == 1) {
@@ -182,24 +198,25 @@
           Got some books to upload...<br />
           you can upload your books here...
         </h1>
-          <form action="">
-            <label class="custom-file-upload">Click here to choose your file
-              <input id="uploadFile" type="file" style="display: none;" />
-            </label><br><br>
-            <span id="filePath" >No file chosen</span><br><br>
-            <button class="fileBtn" type="submit">Upload</button>
-          </form>
+        <form action="">
+          <label class="custom-file-upload"
+            >Click here to choose your file
+            <input id="uploadFile" type="file" style="display: none" /> </label
+          ><br /><br />
+          <span id="filePath">No file chosen</span><br /><br />
+          <button class="fileBtn" type="submit">Upload</button>
+        </form>
       </div>
     </section>
     <script>
-      document.getElementById('uploadFile').addEventListener('change', (e) => {
+      document.getElementById("uploadFile").addEventListener("change", (e) => {
         let file_path = e.currentTarget.value;
-        let find = '\\';
-        debugger
-        if(file_path == '') file_path = 'No file chosen';
-        else file_path = file_path.slice(file_path.lastIndexOf(`\\`)+1);
-        document.getElementById('filePath').innerHTML = file_path;
-      })
+        let find = "\\";
+        debugger;
+        if (file_path == "") file_path = "No file chosen";
+        else file_path = file_path.slice(file_path.lastIndexOf(`\\`) + 1);
+        document.getElementById("filePath").innerHTML = file_path;
+      });
     </script>
     <!-- Twitter section -->
     <section class="twitterSec">
@@ -247,7 +264,9 @@
           </div>
           <div class="contentLeft">
             <p>NEWS</p>
-            <a style="font-size: 1.5em; display: inline-block" href="yame_html/yame8.html"
+            <a
+              style="font-size: 1.5em; display: inline-block"
+              href="yame_html/yame8.html"
               >Top 5 Web Design and Development Books to Read This Year</a
             >
             <p style="color: rgb(92, 92, 92)">
