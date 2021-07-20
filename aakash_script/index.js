@@ -5,7 +5,7 @@ _showSlide(_currentSlide);
 var x = setInterval(() => {
   _currentSlide++;
   _showSlide(_currentSlide);
-}, 3000);
+}, 4000);
 
 function _changeSlide(n) {
   _currentSlide += n;

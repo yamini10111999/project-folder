@@ -8,9 +8,11 @@ window.onload = () => {
       b = Btn.parentElement.children[2].innerHTML;
       storeItem(a, b);
       Btn.classList.add('added');
+      Btn.setAttribute('disabled', 'disabled');
       setTimeout( function() {
         Btn.classList.remove('added')
-      }, 2000);
+        Btn.removeAttribute('disabled');
+      }, 1500);
     });
   }
 };

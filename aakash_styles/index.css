@@ -9,6 +9,7 @@
 .slideShow {
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .slideShow .slide {
   color: white;
@@ -91,14 +92,24 @@
   background-color: rgb(121, 121, 121);
 }
 .slideActive {
-  animation: fadeIn 0.5s forwards;
+  animation: fadeIn 4s ease-in-out forwards;
 }
 @keyframes fadeIn {
-  from {
-    opacity: 0;
+  0% {
+    opacity: 0.1;
+    transform: translateX(10%);
   }
-  to {
+  25% {
     opacity: 1;
+    transform: translateX(0);
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0.1;
+    transform: translateX(10%);
   }
 }
 
